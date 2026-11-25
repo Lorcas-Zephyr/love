@@ -1,0 +1,8 @@
+# Source archives, the original album, and private review exports stay local.
+*.zip
+/照片整理结果/
+/photo-review/
+/content/
+/preview/
+__pycache__/
+*.pyc

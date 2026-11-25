@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#262d27" />
+    <meta name="description" content="从我们相识那天，到每一个有你的日常。" />
+    <title>我们的日常 · 从相识到现在</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="data.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#timeline">跳到时间轴</a>
+    <main>
+      <section id="home" class="cover" aria-labelledby="cover-title">
+        <img id="cover-image" class="cover-image" alt="" fetchpriority="high" />
+        <div class="cover-shade" aria-hidden="true"></div>
+        <header class="site-header">
+          <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">♡</span><span>我们的日常<small>A LITTLE STORY OF US</small></span></a>
+          <a class="header-link" href="#timeline">时间轴 <span aria-hidden="true">↓</span></a>
+        </header>
+        <div class="cover-copy">
+          <div class="cover-kicker"><span></span> 2025.10.30 — 一直一直</div>
+          <h1 id="cover-title">从我们相识那天，<br />到每一个有你的日常。</h1>
+          <p>一些被好好珍藏的日子，<br />和那天说过的话。</p>
+          <a class="cover-cta" href="#timeline">沿时间，慢慢看 <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="cover-foot"><span>我们已经相识 <strong id="met-days">—</strong> 天</span><span>SCROLL TO UNFOLD OUR DAYS　↓</span></div>
+        <span class="cover-date" aria-hidden="true">OCTOBER 30, 2025</span>
+      </section>
+
+      <section id="timeline" class="timeline-section" aria-labelledby="timeline-title">
+        <div class="section-heading"><div><div class="eyebrow">LITTLE MOMENTS, KEPT CLOSE</div><h2 id="timeline-title">我们的时间轴<span>。</span></h2><p>点开一个日子，看看那天的我们。</p></div><div class="total-note"><strong id="total-photos">114</strong><span>张精选照片</span></div></div>
+        <div class="timeline-tools"><div id="year-filters" class="year-filters" role="group" aria-label="按年份筛选"></div><label class="search-field"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" aria-label="搜索时间轴" placeholder="搜搜那一天、那个地方…" autocomplete="off" /></label></div>
+        <div class="timeline-intro"><span id="timeline-summary" role="status"></span><span>照片 · 日期 · 你写下的话</span></div>
+        <div id="timeline-list" class="timeline-list"></div>
+        <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">♡</span><p>暂时没有符合条件的日子。</p><button id="reset-filters" type="button">看看全部日子</button></div>
+        <footer class="timeline-footer"><span>还有好多日子，等我们继续写。</span><span aria-hidden="true">♡</span></footer>
+      </section>
+    </main>
+
+    <dialog id="memory-dialog" class="memory-dialog" aria-labelledby="memory-title">
+      <button id="dialog-close" class="dialog-close" type="button" aria-label="关闭回忆">×</button>
+      <div class="dialog-content">
+        <div class="dialog-eyebrow"><span aria-hidden="true">✳</span> THAT DAY, WITH YOU</div>
+        <time id="memory-date" class="memory-date"></time>
+        <h2 id="memory-title"></h2>
+        <p id="memory-place" class="memory-place"></p>
+        <div class="photo-stack" aria-label="这一天的精选照片">
+          <div id="stack-back-two" class="stack-card stack-back-two" aria-hidden="true"></div>
+          <div id="stack-back-one" class="stack-card stack-back-one" aria-hidden="true"></div>
+          <button id="stack-front" class="stack-card stack-front" type="button" aria-label="下一张照片"></button>
+        </div>
+        <div class="stack-controls"><button id="photo-prev" class="stack-arrow" type="button" aria-label="上一张照片">←</button><span id="photo-count" role="status"></span><button id="photo-next" class="stack-arrow" type="button" aria-label="下一张照片">→</button></div>
+        <div class="dialog-footer"><span>好好珍藏的每个小瞬间</span><span>♡</span></div>
+      </div>
+    </dialog>
+    <noscript><p class="noscript">请启用 JavaScript，翻看时间轴和照片。</p></noscript>
+  </body>
+</html>
