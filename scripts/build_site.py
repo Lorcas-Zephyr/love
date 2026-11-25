@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the public album from favorite photos; keep review data outside site/."""
+"""Build the public album at the repository root from favorite photos."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = ROOT / "site"
+SITE = ROOT
 
 
 def load_manifest() -> dict:
